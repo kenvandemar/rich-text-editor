@@ -201,6 +201,7 @@ export default class RichTextEditor extends Component {
   }
 
   _renderLinkModal() {
+    const { ...otherProps } = this.props
     return (
       <Modal
         animationType={'fade'}
@@ -213,6 +214,7 @@ export default class RichTextEditor extends Component {
             <Text style={styles.inputTitle}>Title</Text>
             <View style={styles.inputWrapper}>
               <TextInput
+                {...otherProps}
                 style={styles.input}
                 onChangeText={(text) => this.setState({linkTitle: text})}
                 value={this.state.linkTitle}
@@ -221,6 +223,7 @@ export default class RichTextEditor extends Component {
             <Text style={[styles.inputTitle ,{marginTop: 10}]}>URL</Text>
             <View style={styles.inputWrapper}>
               <TextInput
+                {...otherProps}
                 style={styles.input}
                 onChangeText={(text) => this.setState({linkUrl: text})}
                 value={this.state.linkUrl}
