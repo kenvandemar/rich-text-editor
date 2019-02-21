@@ -202,6 +202,7 @@ export default class RichTextEditor extends Component {
 
   _renderLinkModal() {
     const { ...otherProps } = this.props
+    const { onContentSizeChange } = this.props
     return (
       <Modal
         animationType={'fade'}
@@ -218,6 +219,7 @@ export default class RichTextEditor extends Component {
                 style={styles.input}
                 onChangeText={(text) => this.setState({linkTitle: text})}
                 value={this.state.linkTitle}
+                onContentSizeChange={onContentSizeChange}
               />
             </View>
             <Text style={[styles.inputTitle ,{marginTop: 10}]}>URL</Text>
@@ -230,6 +232,7 @@ export default class RichTextEditor extends Component {
                 keyboardType="url"
                 autoCapitalize="none"
                 autoCorrect={false}
+                onContentSizeChange={onContentSizeChange}
               />
             </View>
             {PlatformIOS && <View style={styles.lineSeparator}/>}
