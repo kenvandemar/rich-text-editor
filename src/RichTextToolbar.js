@@ -17,6 +17,7 @@ function getDefaultIcon() {
   texts[actions.insertImage] = require('../img/icon_format_media.png')
   texts[actions.setBold] = require('../img/icon_format_bold.png')
   texts[actions.setItalic] = require('../img/icon_format_italic.png')
+  texts[actions.setUnderline] = require('../img/underline.png')
   texts[actions.insertBulletsList] = require('../img/icon_format_ul.png')
   texts[actions.insertOrderedList] = require('../img/icon_format_ol.png')
   texts[actions.insertLink] = require('../img/icon_format_link.png')
