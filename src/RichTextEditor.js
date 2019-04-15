@@ -235,7 +235,6 @@ export default class RichTextEditor extends Component {
                 onContentSizeChange={onContentSizeChange}
               />
             </View>
-            {PlatformIOS && <View style={styles.lineSeparator}/>}
             {this._renderModalButtons()}
           </View>
         </View>
@@ -651,12 +650,5 @@ const styles = StyleSheet.create({
   input: {
     height: PlatformIOS ? 20 : 40,
     paddingTop: 0,
-  },
-  lineSeparator: {
-    height: 1 / PixelRatio.get(),
-    backgroundColor: '#d5d5d5',
-    marginLeft: -20,
-    marginRight: -20,
-    marginTop: 20,
   },
 })
