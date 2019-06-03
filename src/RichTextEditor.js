@@ -70,7 +70,6 @@ export default class RichTextEditor extends Component {
   }
 
   _onKeyboardWillShow(event) {
-    console.log('!!!!', event)
     const newKeyboardHeight = event.endCoordinates.height
     if (this.state.keyboardHeight === newKeyboardHeight) {
       return
@@ -642,7 +641,9 @@ const styles = StyleSheet.create({
   inputWrapper: {
     marginTop: 5,
     marginBottom: 10,
-  
+    borderStyle: 'solid',
+    borderBottomColor: '#4a4a4a',
+    borderBottomWidth: 1,
   },
   inputTitle: {
     color: '#4a4a4a',
