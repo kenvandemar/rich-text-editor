@@ -643,7 +643,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderStyle: 'solid',
     borderBottomColor: '#4a4a4a',
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.5,
   },
   inputTitle: {
     color: '#4a4a4a',
